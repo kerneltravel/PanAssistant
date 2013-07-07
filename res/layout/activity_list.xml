@@ -1,0 +1,129 @@
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_pure" >
+
+    <!-- 列出全部的文档 -->
+
+    <LinearLayout
+        android:id="@+id/all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="5dp" >
+
+            <ListView
+                android:id="@+id/list_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </ListView>
+            <!-- 定义一个ImageView，用于作为列表项的一部分。 -->
+
+            <ImageView
+                android:id="@+id/header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp" />
+            <!-- 定义一个TextView，用于作为列表项的一部分。 -->
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:textSize="16dp" />
+        </FrameLayout>
+    </LinearLayout>
+    <!-- 列出所有的文档 -->
+
+    <LinearLayout
+        android:id="@+id/docs"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="5dp" >
+
+            <ListView
+                android:id="@+id/list_docs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </ListView>
+        </FrameLayout>
+    </LinearLayout>
+    <!-- 列出所有的音乐 -->
+
+    <LinearLayout
+        android:id="@+id/music"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:textSize="11pt" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="5dp" >
+
+            <ListView
+                android:id="@+id/list_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </ListView>
+        </FrameLayout>
+    </LinearLayout>
+    <!-- 列出所有的图片 -->
+
+    <LinearLayout
+        android:id="@+id/pictures"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:textSize="11pt" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="5dp" >
+
+            <ListView
+                android:id="@+id/list_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </ListView>
+        </FrameLayout>
+    </LinearLayout>
+
+</TabHost>
