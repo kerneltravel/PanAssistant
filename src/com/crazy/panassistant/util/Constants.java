@@ -8,13 +8,13 @@ package com.crazy.panassistant.util;
  */
 public class Constants {
 
-	public final static String mbRootPath = "/";
+	public final static String mbRootPath = "/apps/crazy/";
 
 	// api key(来至百度应用管理)
-	public static final String API_KEY = "Yh0qUTNIwqYjWtYInh1fFWft";
+	public static final String API_KEY = "KTbCGmWxOjRMbGzSkvrxoCsm";
 
 	// secret key(来至百度应用管理)
-	public static final String SECRET_KEY = "LdvIwQRSlZkGb11pI6KB2V2st5KGUgG8";
+	public static final String SECRET_KEY = "L6GX5CNfjNn83MDzARRg45sXdfIjuFvm";
 
 	// 获取当前用户空间配额信息基础URL
 	public static final String SPACE = "https://pcs.baidu.com/rest/2.0/pcs/quota";

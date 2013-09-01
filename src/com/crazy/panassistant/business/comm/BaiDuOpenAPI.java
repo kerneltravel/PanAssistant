@@ -69,6 +69,7 @@ public class BaiDuOpenAPI {
 			@Override
 			public void onComplete(BaiduOAuthResponse response) {
 				if (null != response) {
+					activity.setVisible(false);
 					mbOauth = response.getAccessToken();
 					System.out.println("mbOauth======" + mbOauth);
 					Toast.makeText(activity.getApplicationContext(), "µÇÂ½³É¹¦",
@@ -76,6 +77,7 @@ public class BaiDuOpenAPI {
 					Intent intent = new Intent(activity, ListActivity.class);
 					intent.putExtra("accessToken", mbOauth);
 					activity.startActivity(intent);
+					activity.finish();
 				}
 			}
 
@@ -96,11 +98,9 @@ public class BaiDuOpenAPI {
 					String fileName = file.split("/")[len - 1];
 					BaiduPCSClient api = new BaiduPCSClient();
 					api.setAccessToken(mbOauth);
-
 					final BaiduPCSActionInfo.PCSFileInfoResponse response = api
 							.uploadFile(file, Constants.mbRootPath + fileName,
 									new BaiduPCSStatusListener() {
-
 										@Override
 										public void onProgress(long bytes,
 												long total) {
@@ -342,7 +342,10 @@ public class BaiDuOpenAPI {
 							+ ret.status.message);
 					System.out.println("ret.status.errorCode---------->>>"
 							+ ret.status.errorCode);
-					System.out.println("list---------->>>" + ret.list);
+					System.out.println("list---------->>>"
+							+ ret.list.get(0).blockList);
+					System.out.println("list2---------->>>"
+							+ ret.list.get(0).fsId);
 					mbUiThreadHandler.post(new Runnable() {
 						public void run() {
 							Toast.makeText(

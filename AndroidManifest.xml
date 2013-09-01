@@ -26,26 +26,18 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.crazy.panassistant.actvity.MainActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name="com.crazy.panassistant.actvity.ListActivity"
             android:label="@string/title_activity_list" >
         </activity>
-         <activity android:name=".LoadActivity"  
-                  android:configChanges="orientation|keyboardHidden"  
-                  android:theme="@style/MyTheme.NoTitleBar.CustomBackground">  
-            <intent-filter>  
-                <action android:name="android.intent.action.MAIN" />  
-                <category android:name="android.intent.category.LAUNCHER" />  
-            </intent-filter>  
-        </activity>  
+        <activity
+            android:name=".LoadActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/MyTheme.NoTitleBar.CustomBackground" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.app.TabActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TabHost;
@@ -67,7 +68,8 @@ public class ListActivity extends TabActivity {
 						R.id.header });
 		ListView list = (ListView) findViewById(R.id.list_all);
 		// 为ListView设置Adapter
-		list.setAdapter(simpleAdapter);
+		list.setAdapter(new ArrayAdapter<String>(this,
+				android.R.layout.simple_expandable_list_item_1, getData()));
 	}
 
 	@Override
@@ -75,6 +77,20 @@ public class ListActivity extends TabActivity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		// getMenuInflater().inflate(R.menu.list, menu);
 		return true;
+	}
+
+	private List<String> getData() {
+
+		List<String> data = new ArrayList<String>();
+		data.add("测试数据1");
+		data.add("测试数据2");
+		data.add("测试数据3");
+		data.add("测试数据4");
+		data.add("测试数据5");
+		data.add("测试数据6");
+		data.add("测试数据7");
+		data.add("测试数据8");
+		return data;
 	}
 
 }
